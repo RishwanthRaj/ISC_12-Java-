@@ -1,0 +1,54 @@
+import java.io.*;
+class Duplicate                                    //program to remove duplicate elements
+{
+int size;
+int num[]=new int[10]; 
+int x[]=new int[10]; 
+InputStreamReader read=new InputStreamReader(System.in);
+BufferedReader in=new BufferedReader(read);
+void readList()throws IOException
+{
+int i;  
+System.out.println("enter the elements in a sorted manner");
+for(i=0;i<10;i++)
+{
+num[i]=Integer.parseInt(in.readLine());
+ }
+}
+void packList()
+{
+int i,j;
+size=10;
+for (i = 0; i < size; i++) 
+{
+for (j = i + 1; j < size; j++) 
+{
+if (num[i] == num[j]) // checking one element with all the
+{
+while (j < (size) - 1) 
+{
+num[j] = num[j + 1];// shifting the values
+j++;
+}	
+size--;
+}
+}
+}
+}
+void dispList()
+{
+int i;
+System.out.println("unique elements are");
+for(i=0;i<size;i++)
+{
+System.out.println(num[i]);
+}
+}
+public static void main(String args[])throws IOException
+{
+Duplicate ob=new Duplicate();
+ob.readList();
+ob.packList();
+ob.dispList();
+}
+}
