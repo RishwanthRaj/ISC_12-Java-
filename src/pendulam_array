@@ -1,0 +1,49 @@
+import java.io.*;
+class pendulam
+{
+public static void main(String args[])throws IOException
+{
+int c=0,i,j,t;
+InputStreamReader read = new InputStreamReader(System.in);
+BufferedReader in = new BufferedReader(read);
+int a[]=new int[20];
+int b[]=new int[20];
+System.out.println("Enter ten elements");
+for(i=0;i<10;i++)
+a[i]=Integer.parseInt(in.readLine());
+for(i=0;i<9;i++)
+{
+for(j=0;j<(9-i);j++)
+{
+if(a[j]>a[j+1])
+{
+t=a[j];
+a[j]=a[j+1];
+a[j+1]=t;
+}
+}
+}
+System.out.println("The sorted array");
+for(i=0;i<10;i++)
+System.out.print(a[i]+" ");
+System.out.println();
+int m=0,n=9;
+for(i=9;i>=0;i--)
+{
+if(c%2==0)
+{
+b[m]=a[i];
+m++;
+}
+else if(c%2!=0)
+{
+b[n]=a[i];
+n--;
+}
+c++;
+}
+System.out.println("the elements after processing");
+for(i=0;i<10;i++)
+System.out.print(b[i]+" ");
+}
+}
