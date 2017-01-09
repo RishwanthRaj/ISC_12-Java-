@@ -1,4 +1,4 @@
-## Welcome to this Collection on Java Progrmas by L4TTiCe
+## Welcome to this Collection on Java Progrmas by Rishwanth Raj
 
 These programs were put together by Rishwanth Raj [Facebook](https://www.facebook.com/rishwanth.raj.3) to suggest edits or poit out mistakes please contact me via email rajrishwanth@gmail.com or file an issue.
 
@@ -33,12 +33,8 @@ This repo contains programs for
 22.	Diagonal printing		
 23.	Checking special number using function		
 24.	Removing duplicate element from an array		
-25.	Cyclic number and string using method overloading		
-26.	Calculating PF and gratuity using inheritance		
-27.	Library management		
-28.	Banking		
-29.	Resort management		
-30.	Tree traversal		
+25.	Calculating PF and gratuity using inheritance		
+26.	Tree traversal		
 
 ```
 
