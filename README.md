@@ -1,8 +1,8 @@
 ## Welcome to this Collection on Java Progrmas by L4TTiCe
 
-These programs were put together by L4TTiCe [Twitter](https://twitter.com/l4ttice) [Facebook](https://www.facebook.com/mdheshan) to suggest edits or poit out mistakes please contact L4TTice via email dheshan.mail@gmail.com or file an issue.
+These programs were put together by Rishwanth Raj [Facebook](https://www.facebook.com/rishwanth.raj.3) to suggest edits or poit out mistakes please contact me via email rajrishwanth@gmail.com or file an issue.
 
-This repostory contains Java Programs coded for ISC Examination 2017's Computer Science Practical File and were coded in Jetbrains IntelliJ IDE.
+This repostory contains Java Programs coded for ISC Examination 2017's Computer Science Practical File.
 
 ### Contents
 
