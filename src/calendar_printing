@@ -1,0 +1,98 @@
+import java.io.*;
+class calendar
+{//to print the calendar for a month
+public static void main(String args[])throws IOException
+{
+int b[][]=new int[6][7];
+int i,j,k,l=0,y,c;
+String m,d,mon="",f="February";
+InputStreamReader read = new InputStreamReader(System.in);
+BufferedReader in = new BufferedReader(read);
+String month[]={"January","February","March","April","May","June","July","August","September","October","November","December"};
+int s[]={31,28,31,30,31,30,31,31,30,31,30,31};
+String days[]={"sunday","monday","tuesday","wednesday","thursday","friday","saturday"};
+String day[]={"Sun","Mon","Tue","Wed","Thu","Fri","Sat"};
+System.out.println("Enter the year");
+y=Integer.parseInt(in.readLine());
+System.out.println("Enter the month");
+m=in.readLine();
+System.out.println("Enter the first day of the month");
+d=in.readLine();
+
+for(i=0;i<12;i++)
+{
+if(m.equalsIgnoreCase(month[i]))
+{
+mon=month[i];
+if(mon.equalsIgnoreCase(f))
+{
+if(y%4==0)
+l=29;
+else
+l=28;
+}
+else
+l=s[i];
+}
+}
+
+for(k=0;k<7;k++)
+{
+if(days[k].equalsIgnoreCase(d))
+break;
+}
+k=k+1;
+
+for(i=0;i<27;i++)
+System.out.print("_");
+System.out.println();
+System.out.println(mon+"-"+y);
+for(i=0;i<27;i++)
+
+System.out.println();
+for(i=0;i<7;i++)
+System.out.print(day[i]+" ");
+System.out.println();
+for(i=0;i<27;i++)
+
+System.out.println();
+
+c=1;
+for(i=0;i<6;i++)
+{
+for(j=0;j<7;j++)
+if(k>1)
+k--;
+else
+{
+if(c<=l)
+{
+b[i][j]=c;
+c++;
+}
+}
+}
+c=1;
+for(i=0;i<6;i++)
+{
+for(j=0;j<7;j++)
+{
+if(c<=l)
+{
+if(b[i][j]==0)
+System.out.print("    ");
+else if(b[i][j]!=0)
+{
+if(b[i][j]<10)
+System.out.print(b[i][j]+"   ");
+else
+System.out.print(b[i][j]+"  ");
+}
+}
+}
+System.out.println();
+}
+}
+}
+
+                                                           
