@@ -184,17 +184,32 @@ public static void main(String[] args) throws IOException
     {
         int value;
         Tree theTree = new Tree();
-        theTree.insert(42);
+        Scanner sc=new Scanner(System.in);
+    /*    theTree.insert(42);
         theTree.insert(25);
         theTree.insert(65);
         theTree.insert(12);
-        theTree.insert(37);
+        theTree.insert(37)
         theTree.insert(13);
         theTree.insert(30);
         theTree.insert(43);
         theTree.insert(87);
         theTree.insert(99);
-        theTree.insert(9);
+        theTree.insert(9);*/
+        while(true)
+        {
+	System.out.println("Do u want to enter a node y/n : ");
+	char userDecision=sc.next().charAt(0);
+	if( userDecision=='y' || userDecision=='Y')
+	{
+		System.out.println("Enter node data : ");	
+		int itemValue=sc.nextInt();
+		theTree.insert(itemValue);
+	}
+	else{
+	    break;
+	}	
+        }
         System.out.println("Displaying the tree");
         theTree.displayTree();
          System.out.println("Inorder traversal");
