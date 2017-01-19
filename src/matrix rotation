@@ -1,0 +1,47 @@
+import java.io.*;
+class rotate
+{
+public static void main(String args[])throws IOException         //rotation by 90degree
+{
+int i,j,m,n,s=0;
+InputStreamReader read = new InputStreamReader(System.in);
+BufferedReader in=new BufferedReader(read);
+System.out.println("Enter the size of the array");
+m=Integer.parseInt(in.readLine());
+int a[][]=new int[m][m];
+int b[][]=new int[m][m];
+System.out.println("Enter the array");
+for(i=0;i<m;i++)
+{
+for(j=0;j<m;j++)
+a[i][j]=Integer.parseInt(in.readLine());
+}
+System.out.println("ORIGINAL MATRIX");
+for(i=0;i<m;i++)
+{
+for(j=0;j<m;j++)
+System.out.print(a[i][j]+" ");
+System.out.println();
+}
+n=m-1;
+for(i=0;i<m;i++)
+{
+for(j=0;j<m;j++)
+{
+b[j][n]=a[i][j];
+}
+n--;
+}
+System.out.println("MATRIX AFTER ROTATION");
+for(i=0;i<m;i++)
+{
+for(j=0;j<m;j++)
+System.out.print(b[i][j]+" ");
+System.out.println();
+}
+s=b[0][0]+b[0][m-1]+b[m-1][0]+b[m-1][m-1];
+System.out.println("Sum of the corner elements = "+s);
+else
+System.out.println("INVALID INPUT");
+}
+}
