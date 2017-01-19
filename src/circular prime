@@ -1,0 +1,51 @@
+import java.io.*;
+import java.util.*;
+class cp
+{
+boolean isPrime(int n) //function to check if a number is prime or not
+{
+int c=0;
+for(int i=1;i<=n;i++)
+{
+if(n%i==0)
+c++;
+}
+if(c==2)
+return true;
+else
+return false;
+}
+int circulate(int n)//function to form new combinations
+{
+String s=Integer.toString(n);
+String p=s.substring(1)+s.charAt(0);
+int a=Integer.parseInt(p);
+return a;
+}
+void isCP(int n)//function to check if it is circular prime
+{
+int f=0,a=n;
+do
+{
+System.out.println(a);
+if(isPrime(a)==false)
+{
+f=1;
+}
+a=circulate(a);
+}
+while(a!=n);
+if(f==1)
+System.out.println(n+"is not circular prime");
+else
+System.out.println(n+"is circular prime");
+}
+public static void main(String args[])throws IOException
+{
+cp ob=new cp();
+Scanner sc=new Scanner(System.in);
+System.out.println("enter a number");
+int n=sc.nextInt();
+ob.isCP(n);
+}
+}
