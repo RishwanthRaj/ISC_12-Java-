@@ -1,0 +1,78 @@
+import java.io.*;
+class strng
+{//to count number of words starting and ending with vowels
+public static void main(String args[])throws IOException
+{
+String a[]=new String[20];
+int i,k=0,l,f=0,v=0;
+String str="",s;
+char c,t,ch,chr;
+boolean flag,fl;
+InputStreamReader read=new InputStreamReader(System.in);
+BufferedReader in=new BufferedReader(read);
+System.out.println("Enter the string in upper case");
+s=in.readLine();
+l=s.length();
+t=s.charAt(l-1);
+chr=s.charAt(0);
+if(chr=='A'||chr=='E'||chr=='I'||chr=='O'||chr=='U')
+f=1;
+if(t=='.'||t=='?'||t=='!')
+{
+for(i=0;i<(l-1);i++)
+{
+chr=s.charAt(i);
+fl=Character.isLetter(chr);
+if(fl==true)
+{
+flag=Character.isUpperCase(chr);
+if(flag==false)
+{
+System.out.println("INVALID OUTPUT-"+chr);
+break;
+}
+else
+str=str+chr;
+}
+else if(chr==' ')
+{
+c=s.charAt(i-1);
+if(c!=' ')
+{
+if(c=='A'||c=='E'||c=='I'||c=='O'||c=='U')
+{
+if(f==1)
+{
+System.out.print(str+" ");
+v++;
+f=0;
+}
+else
+{
+a[k]=str;
+k++;
+}
+str=""; 
+}
+}
+ch=s.charAt(i+1);
+if(ch!=' ')
+{
+if(ch=='A'||ch=='E'||ch=='I'||ch=='O'||ch=='U')
+{
+f=1;
+}
+}
+str="";
+}
+}
+}
+else
+System.out.println("INVALID OUTPUT");
+
+for(i=0;i<k;i++)
+System.out.print(a[i]);
+System.out.println();
+System.out.println("The number of words starting and ending with a vowel is "+k);
+}
+}
