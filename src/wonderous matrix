@@ -1,0 +1,83 @@
+import java.io.*;
+public class wonderous
+{
+public static void main(String args[])throws IOException
+{
+InputStreamReader read=new InputStreamReader(System.in);
+BufferedReader in=new BufferedReader(read);
+int r=0,c=0,n;
+int v=0,x,y;
+System.out.println("enter size of matrix");
+n=Integer.parseInt(in.readLine());
+int a[][]=new int[n][n];
+      for(x=0;x<n;x++)
+{
+ for(y=0;y<n;y++)
+ {
+ System.out.print("enter number");
+a[x][y]=Integer.parseInt(in.readLine());
+}
+}
+System.out.println();
+ for(x=0;x<n;x++)
+   {
+for(y=0;y<n;y++)
+ System.out.print(a[x][y]+"\t");
+ System.out.println();
+ }
+ System.out.println();
+System.out.println("   prime no\trow\tcolumn");  
+for(r=0;r<n;r++)  
+for(c=0;c<n;c++)
+{
+if(prime(a[r][c]))
+System.out.println("\t"+a[r][c]+"\t"+(r)+"\t"+(c));  
+}
+int f=1;
+int ld=0,rd=0;
+for(r=0,c=n-1;r<n;r++,c--)
+{
+ld=ld+a[r][r];
+rd=rd+a[r][c];
+}
+if(ld!=rd)
+f=0;
+for( r=0;r<n;r++)
+{
+int s=0;
+for( c=0;c<n;c++)
+s=s+a[r][c];
+if(s!=ld)
+f=0;
+}
+for( r=0;r<n;r++)
+{
+int s=0;
+for( c=0;c<n;c++)
+s=s+a[c][r];
+if(s!=ld)
+f=0;
+}
+System.out.println();
+if(f==0)
+System.out.println("IT IS NOT A WONDROUS MATRIX");
+else
+System.out.println("IT IS A WONDROUS MATRIX");
+}
+static boolean prime(int x)
+{
+int c=0;
+for(int i=2;i<=Math.sqrt(x);i++)
+{
+if(x%i==0)
+{
+c++;
+break;
+}
+}
+if(c==0)
+return true;
+else
+return false;
+}
+}
