@@ -1,6 +1,6 @@
-## Welcome to this Collection on Java Progrmas by Rishwanth Raj
+## Welcome to this Collection on Java Programs by Rishwanth Raj
 
-These programs were put together by Rishwanth Raj [Facebook](https://www.facebook.com/rishwanth.raj.3) to suggest edits or poit out mistakes please contact me via email rajrishwanth@gmail.com or file an issue.
+These programs were put together by Rishwanth Raj [Facebook](https://www.facebook.com/rishwanth.raj.3) to suggest edits or point out mistakes please contact me via email rajrishwanth@gmail.com or file an issue.
 
 This repostory contains Java Programs coded for ISC Examination 2017's Computer Science Practical File.
 
